@@ -56,9 +56,9 @@ pipeline {
 
                         scp -o StrictHostKeyChecking=no \
                         app.py requirements.txt \
-                        USER@APP_IP:/home/USER/app/
+                        bishwajeetmannas132418@34.93.14.63:/home/bishwajeetmannas132418/app/
 
-                        ssh -o StrictHostKeyChecking=no USER@APP_IP \
+                        ssh -o StrictHostKeyChecking=no bishwajeetmannas132418@34.93.14.63 \
                         "cd ~/app && pip3 install -r requirements.txt && \
                         nohup python3 app.py > app.log 2>&1 &"
                     '''
